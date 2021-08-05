@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@material-ui/core';
 import classes from './Signup.module.css';
 
+import { useHistory } from 'react-router-dom';
 import * as authActions from '../../redux/actions/authActions';
 import { useDispatch } from 'react-redux';
 
@@ -11,7 +12,9 @@ const Auth = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const signupHandler = () => {
         const authData = {
@@ -24,6 +27,7 @@ const Auth = () => {
             setUsername('');
             setEmail('');
             setPassword('');
+            setIsLogin(true);
         }
     }
 
@@ -36,6 +40,9 @@ const Auth = () => {
             dispatch(authActions.login(authData));
             setEmail('');
             setPassword('');
+            
+            history.push('/');
+            
         }
     }
 
@@ -50,7 +57,7 @@ const Auth = () => {
 
             <div className={classes.blockB}>
                 <h1>{!isLogin ? 'Sign up' : 'Login'}</h1>
-                <form>
+                <form onSubmit={!isLogin ? signupHandler : loginHandler}>
                     {!isLogin && 
                     <input value={username} onChange={e => setUsername(e.target.value)} placeholder='Username' /> 
                     }

@@ -15,6 +15,7 @@ export const signup = (authData) => {
             console.log('[RESPONSE] ', response.data);
         } catch (error) {
             console.log('[erroR] ', error);
+            throw error;
         }
         
         dispatch({ type: SIGNUP });
@@ -30,6 +31,7 @@ export const login = (authData) => {
             console.log('[RESPONSE]  ', response.data);
         } catch (error) {
             console.log('[ERROR] ', error);
+            throw error;
         }
 
         dispatch({ type: LOGIN, user: response.data.user, token: response.data.token})

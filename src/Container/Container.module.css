@@ -1,0 +1,44 @@
+.Container {
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ToolbarContainer {
+    flex: 10%;
+    width: 100%;
+    
+    /* position: fixed; */
+}
+
+.BlockContainer {
+    display: flex;
+    flex: 90%;
+}
+
+.Container .BlockA {
+    /* flex: 0.3; */
+    background-color: lightblue;
+    position: fixed;
+    z-index: 10;
+    width: 25%;
+    height: 90%;
+}
+
+.Container .BlockB {
+    /* flex: 0.6; */
+    background-color: lightgreen;
+    margin-left: 25%;
+    position: relative;
+    width: 50%;
+}
+
+.Container .BlockC {
+    /* flex: 0.2; */
+    background-color: lightslategrey;
+    position: fixed;
+    margin-left: 75%;
+    width: 25%;
+    height: 90%;
+}
