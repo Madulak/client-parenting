@@ -1,0 +1,61 @@
+.Signup {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(40, 110, 110);
+    display:  flex;
+    
+}
+
+.blockA {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.blockA h3 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 1rem 0;
+}
+
+.blockB {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blockB h1 {
+    margin-bottom: 1rem;
+}
+
+.blockB form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.blockB form input {
+    border: 2px darkcyan solid;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.Signup p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.Signup span {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.Signup span:hover {
+    cursor: pointer;
+}

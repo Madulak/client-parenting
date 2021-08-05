@@ -3,7 +3,7 @@ import axios from "axios";
 export const SIGNUP = 'SIGNUP';
 export const LOGIN = 'LOGIN';
 
-const baseURl = 'http://localhost:8080'
+const baseUrl = 'http://localhost:8080'
 
 export const signup = (authData) => {
 
@@ -11,7 +11,7 @@ export const signup = (authData) => {
 
         let response;
         try {
-            response = await axios.post(baseURl+ '/signup',authData);
+            response = await axios.post(baseUrl+ '/signup',authData);
             console.log('[RESPONSE] ', response.data);
         } catch (error) {
             console.log('[erroR] ', error);
@@ -32,6 +32,6 @@ export const login = (authData) => {
             console.log('[ERROR] ', error);
         }
 
-        dispatch({ type: LOGIN})
+        dispatch({ type: LOGIN, user: response.data.user, token: response.data.token})
     }
 }

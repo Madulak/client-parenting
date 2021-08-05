@@ -1,15 +1,17 @@
 import './App.css';
 import React from 'react';
 import RichTextEditor from './components/RichTextEditor';
+import { Switch, Route } from 'react-router-dom';
+import Auth from './Routes/Auth/Auth';
 
 function App() {
-  
-  
 
   return (
-      <div className={'App'}>
-            <h1>Web app</h1>
-      </div>
+      <Switch>
+          <Route path='/'>
+                <Auth />
+          </Route>
+      </Switch>
     );
 }
 
