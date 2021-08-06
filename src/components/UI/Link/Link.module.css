@@ -1,4 +1,14 @@
 .Link {
     display: flex;
     align-items: center;
+    background-color: lightskyblue;
+    margin: 1rem 0;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: rgb(68, 64, 64);
+    text-decoration: none;
+}
+
+.Link .IconContainer {
+    margin-right: 1rem;
 }

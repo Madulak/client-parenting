@@ -1,12 +1,12 @@
 .Container {
-    width: 99vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .ToolbarContainer {
-    flex: 10%;
+    height: 10%;
     width: 100%;
     
     /* position: fixed; */
@@ -14,7 +14,9 @@
 
 .BlockContainer {
     display: flex;
-    flex: 90%;
+    height: 90%;
+    /* margin-top: 5%; */
+    /* position: fixed; */
 }
 
 .Container .BlockA {
@@ -36,7 +38,7 @@
 
 .Container .BlockC {
     /* flex: 0.2; */
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
     position: fixed;
     margin-left: 75%;
     width: 25%;

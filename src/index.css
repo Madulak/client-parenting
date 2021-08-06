@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  color: rgb(100, 91, 91);
+  box-sizing: border-box;
 }
 
 body {

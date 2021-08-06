@@ -1,6 +1,6 @@
 // import { Avatar, Input, InputAdornment } from '@material-ui/core';
-import classes from './Toolbar.module.css';
 import Avatar from 'react-avatar';
+import classes from './Toolbar.module.css';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import { useSelector } from 'react-redux';

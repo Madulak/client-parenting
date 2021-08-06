@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const SIGNUP = 'SIGNUP';
 export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
 
 const baseUrl = 'http://localhost:8080'
 
@@ -35,5 +36,13 @@ export const login = (authData) => {
         }
 
         dispatch({ type: LOGIN, user: response.data.user, token: response.data.token})
+    }
+}
+
+export const logout = () => {
+
+    return dispatch => {
+
+        dispatch({ type: LOGOUT})
     }
 }

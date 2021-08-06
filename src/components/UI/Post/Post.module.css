@@ -1,0 +1,31 @@
+.Post {
+    padding: 1rem 3rem;
+    /* width: 100%; */
+    background-color: white;
+    margin: 2rem 0;
+    box-shadow: 0 0 10px 3px black;
+    border-radius: 1px;
+    max-height: 20rem;
+    position: relative;
+}
+
+.Post .UserContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.Post .UserContainer h3 {
+    color: teal;
+}
+
+.Post h2 {
+    color: rgb(68, 64, 64);
+}
+
+.Post .AvatarContainer {
+    position: absolute;
+    top: 15%;
+    left: -20px;
+}

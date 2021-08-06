@@ -1,0 +1,10 @@
+.BlockC {
+    padding: 1rem 1rem;
+    background-color: rgba(245, 245, 245, 0.712);
+    min-height: 100%;
+}
+
+.BlockC h3 {
+    margin-bottom: 1rem;
+    color: teal;
+}

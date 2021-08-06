@@ -8,10 +8,12 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import AuthReducer from './redux/reducers/authReducer';
+import PostReducer from './redux/reducers/postReducer';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = combineReducers({
-  auth: AuthReducer
+  auth: AuthReducer,
+  posts: PostReducer,
 })
 
 const store = createStore(root, applyMiddleware(ReduxThunk));

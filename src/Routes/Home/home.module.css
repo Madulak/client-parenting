@@ -1,5 +1,5 @@
 .Home {
-    height: 150%;
+    min-height: 100%;
     /* width: 150%; */
     padding: 1rem 2rem;
     background-color: rgba(245, 245, 245, 0.712);

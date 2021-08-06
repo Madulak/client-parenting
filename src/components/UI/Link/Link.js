@@ -5,8 +5,8 @@ const Linked = ({icon, name}) => {
 
     return (
         <Link to={name === 'feed' ? '/' : '/'+name} className={classes.Link}>
-            <div>
-
+            <div className={classes.IconContainer}>
+                {icon}
             </div>
             <div>
                 <h3>{name}</h3>

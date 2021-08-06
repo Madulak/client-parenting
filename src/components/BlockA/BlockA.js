@@ -6,7 +6,7 @@ const BlockA = () => {
 
     return (
         <div className={classes.BlockA}>
-            <Linked icon={<SiFeedly />}  name={'feed'} />
+            <Linked icon={<SiFeedly size={20} />}  name={'feed'} />
         </div>
     );
 }
