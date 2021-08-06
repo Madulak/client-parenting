@@ -1,3 +1,4 @@
+import BlockA from '../components/BlockA/BlockA';
 import Toolbar from '../components/Toolbar/Toolbar';
 import classes from './Container.module.css';
 
@@ -13,7 +14,7 @@ const Container = ({children}) => {
             <div className={classes.BlockContainer}>
 
                 <div className={classes.BlockA}>
-                    <h1>BlockA</h1>
+                    <BlockA />
                 </div>
 
                 <div className={classes.BlockB}>

@@ -1,10 +1,42 @@
 .Toolbar {
     position: fixed;
-    background-color: yellow;
+    background-color: white;
     width: 100%;
     height: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 10;
+    border-bottom: 1px solid gray;
+}
+
+.Toolbar .LogoContainer {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.Toolbar .topSearch {
+    display: flex;
+    align-items: center;
+    border: 2px grey solid;
+}
+
+.Toolbar .topSearch input {
+    border: none;
+}
+
+.Toolbar .topSearch input:focus {
+    border-color: white;
+}
+
+
+.Toolbar .UserContainer {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.Toolbar .UserContainer * {
+    color: #000;
 }
