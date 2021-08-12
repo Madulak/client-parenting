@@ -4,6 +4,7 @@ export const CREATE_POST = 'CREATE_POST';
 export const CREATE_COMMENT = 'CREATE_COMMENT';
 export const GET_POSTS = 'GET_POSTS';
 export const GET_ONE_POST = 'GET_ONE_POST';
+export const POST_DELETE = 'POST_DELETE';
 
 const baseUrl = 'http://localhost:8080'
 
@@ -11,6 +12,7 @@ export const create_post = (postData) => {
 
     return async (dispatch, getState) => {
         const getToken = getState().auth.token;
+        const getUser = getState().auth.user.username;
         const config = {
             headers: {
                 Authorization: 'bearer '+ getToken,
@@ -25,7 +27,12 @@ export const create_post = (postData) => {
             throw error;
         }
 
-        dispatch({ type: CREATE_POST})
+        const newPost = {
+            ...postData,
+            username: getUser,
+        }
+
+        dispatch({ type: CREATE_POST, newPost})
     }
 }
 
@@ -81,5 +88,21 @@ export const get_one_post = (id) => {
         }
 
         dispatch({ type: GET_ONE_POST})
+    }
+}
+
+export const post_delete = (id) => {
+
+    return async dispatch => {
+        let response;
+        try {
+           response = await axios.delete(baseUrl+'/delete/post/'+id);
+           console.log('[DELETE] Compolete ', response.data); 
+        } catch (error) {
+            console.log('[ERRorRR] ', error);
+            throw error;
+        }
+
+        dispatch({ type: POST_DELETE, deleteId: id})
     }
 }

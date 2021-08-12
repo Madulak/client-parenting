@@ -20,6 +20,8 @@
     display: flex;
     align-items: center;
     border: 2px grey solid;
+    padding: .4rem;
+    border-radius: 10px;
 }
 
 .Toolbar .topSearch input {
@@ -28,6 +30,7 @@
 
 .Toolbar .topSearch input:focus {
     border-color: white;
+    outline: 0;
 }
 
 

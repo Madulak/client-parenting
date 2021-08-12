@@ -1,4 +1,4 @@
-import { GET_POSTS } from "../actions/postActions";
+import { GET_POSTS, POST_DELETE } from "../actions/postActions";
 
 const initialState = {
     posts: [],
@@ -12,6 +12,13 @@ const postReducer = (state = initialState, action) => {
             return {
                 ...state,
                 posts: action.posts
+            }
+
+        case POST_DELETE:
+            const newData = state.posts.filter(el => el._id !== action.deleteId);
+            return {
+                ...state,
+                posts: newData,
             }
 
         default:

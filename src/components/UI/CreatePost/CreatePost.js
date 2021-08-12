@@ -18,6 +18,7 @@ const CreatePost = () => {
             }
             dispatch(postActions.create_post(postData));
             setPostText('');
+            dispatch(postActions.get_posts());
         }
     }
     
