@@ -22,7 +22,7 @@ const Posts = () => {
                     key={el._id} 
                     postCreator={el.postCreator._id}
                     date={el.createdAt}
-                    deletes={() => postDelete(el.postCreator._id)}
+                    deletes={() => postDelete(el._id)}
                 />
             ))}
             {/* <Post /> */}
